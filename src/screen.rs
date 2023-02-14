@@ -28,10 +28,10 @@ impl Screen {
         flipped
     }
 
-    pub fn clear_display(&mut self){
+    pub fn clear_display(&mut self) {
         for y in 0..HEIGHT {
             for x in 0..WIDTH {
-                self.0[y][x]=0;
+                self.0[y][x] = 0;
             }
         }
     }

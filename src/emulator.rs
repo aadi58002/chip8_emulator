@@ -23,6 +23,9 @@ impl Emulator {
         }
     }
     pub fn run_instructions(&mut self) {
-        self.cpu.run_instructions(&mut self.bus)
+        self.bus.tick();
+        self.cpu.run_instructions(&mut self.bus);
+        println!("{:?}", self.bus);
+        println!("{:?}", self.cpu);
     }
 }
